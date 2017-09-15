@@ -1,0 +1,5 @@
+<div>
+  <h4>{{voterName}}</h4>
+  <button (click)="makeVote(true)" [disabled]="voted">Vote Up</button>
+  <button (click)="makeVote(false)" [disabled]="voted">Vote Down</button>
+</div>
