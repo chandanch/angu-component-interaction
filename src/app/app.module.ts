@@ -7,6 +7,7 @@ import { ChildComponentComponent } from './child-component/child-component.compo
 import { SetterComponentComponent } from './setter-component/setter-component.component';
 import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { CounterComponent } from './counter/counter.component';
+import { ShareCounterComponent } from './share-counter/share-counter.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CounterComponent } from './counter/counter.component';
     ChildComponentComponent,
     SetterComponentComponent,
     VoteTakerComponent,
-    CounterComponent
+    CounterComponent,
+    ShareCounterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ShareCounterComponent } from './share-counter/share-counter.component';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @ViewChild(ShareCounterComponent) shareCounter: ShareCounterComponent;
+
   title = 'app';
   private childInput: string;
   private voterList: string[];
   private agreed: number;
   private disagreed: number;
+  private tagInput: string;
 
   constructor() {
     this.voterList = ['Chandler', 'Ross', 'Celeste', 'Charlie'];
@@ -21,7 +26,17 @@ export class AppComponent {
   getInput() {
     console.log(this.childInput);
   }
+
   onVoted(vote: boolean) {
     vote ? this.agreed++ : this.disagreed++;
+  }
+
+  share() {
+    this.shareCounter.increaseShareCount();
+    this.shareCounter.tagName(this.tagInput);
+  }
+
+  showTagName(name: string) {
+    alert(`Tag name: ${name}`);
   }
 }

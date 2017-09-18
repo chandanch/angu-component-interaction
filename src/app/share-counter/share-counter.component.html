@@ -1,0 +1,5 @@
+<p>Total Share :</p> <h3>{{shareCount}}</h3>
+<h4>Shares</h4>
+<ul>
+  <li *ngFor="let tag of taggedNames" (click)="getTagName(tag)">{{tag}}</li>
+</ul>
