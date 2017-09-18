@@ -3,3 +3,7 @@
     padding-bottom: 14px;
     padding-left: 4px;
 }
+.counter-container {
+    border: 4px dotted #6638C5;
+    margin-top: 4px;
+}

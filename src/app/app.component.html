@@ -11,3 +11,11 @@
     <h5>UpVotes: {{agreed}}</h5> <h5>DownVotes: {{disagreed}}</h5>
     <app-vote-taker *ngFor="let voter of voterList" [voterName]="voter" (onVoted)="onVoted($event)"></app-vote-taker>
 </div>
+<div class="counter-container">
+    <h3>Counter</h3>
+    <button (click)="counter.increaseCount()">Add</button>
+    <button (click)="counter.decreaseCount()">Remove</button>
+    <button (click)="counter.resetCount()">Reset</button>
+    <h5>Total Value: {{counter.counterValue}}</h5>
+    <app-counter #counter></app-counter>
+</div>

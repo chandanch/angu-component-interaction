@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { SetterComponentComponent } from './setter-component/setter-component.component';
 import { VoteTakerComponent } from './vote-taker/vote-taker.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponentComponent,
     SetterComponentComponent,
-    VoteTakerComponent
+    VoteTakerComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
