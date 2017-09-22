@@ -1,10 +1,12 @@
+import { MissionService } from './service/mission.service';
 import { ShareCounterComponent } from './share-counter/share-counter.component';
 import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [MissionService]
 })
 export class AppComponent {
 
@@ -16,11 +18,18 @@ export class AppComponent {
   private agreed: number;
   private disagreed: number;
   private tagInput: string;
+  private missionName: string;
+  private launchedMissions: string[] = [];
 
-  constructor() {
+  constructor(private missionService: MissionService) {
     this.voterList = ['Chandler', 'Ross', 'Celeste', 'Charlie'];
     this.agreed = 0;
     this.disagreed = 0;
+    this.missionService.launchedMission$.subscribe(
+      mission => {
+        this.launchedMissions.push(mission);
+      }
+    );
   }
 
   getInput() {
@@ -38,5 +47,10 @@ export class AppComponent {
 
   showTagName(name: string) {
     alert(`Tag name: ${name}`);
+  }
+
+  addMission(missionName: string) {
+    console.log(`M ission Name`, this.missionName);
+    this.missionService.announceMission(this.missionName);
   }
 }

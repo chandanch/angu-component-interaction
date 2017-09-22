@@ -25,3 +25,16 @@
     <button (click)="share()">Share</button>
     <app-share-counter (onTagName)="showTagName($event)"></app-share-counter>
 </div>
+<div class="mission-container">
+    <br>
+    <input type="text" name="missionName" [(ngModel)]="missionName" placeholder="Enter mission name" />
+    <button (click)="addMission(missionName)">Add mission!</button>
+    <app-mission-details></app-mission-details>
+    <hr>
+    <h2>Launched Missions</h2>
+    <ol>
+        <li *ngFor="let launchedMission of launchedMissions">
+            <h3>{{launchedMission}}</h3>
+        </li>
+    </ol>
+</div>

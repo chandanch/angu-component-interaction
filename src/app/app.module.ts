@@ -8,6 +8,7 @@ import { SetterComponentComponent } from './setter-component/setter-component.co
 import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { CounterComponent } from './counter/counter.component';
 import { ShareCounterComponent } from './share-counter/share-counter.component';
+import { MissionDetailsComponent } from './mission-details/mission-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ShareCounterComponent } from './share-counter/share-counter.component';
     SetterComponentComponent,
     VoteTakerComponent,
     CounterComponent,
-    ShareCounterComponent
+    ShareCounterComponent,
+    MissionDetailsComponent
   ],
   imports: [
     BrowserModule,

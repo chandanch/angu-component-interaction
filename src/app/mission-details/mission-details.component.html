@@ -1,0 +1,12 @@
+<h2>
+  Mission List
+</h2>
+<ul>
+  <li *ngFor="let mission of missions">
+    <div>
+      <span class="mission-annouce"><strong>{{mission}}</strong></span>
+      <button (click)="launchMission(mission)">Launch!</button>
+    </div>
+  </li>
+</ul>
+
