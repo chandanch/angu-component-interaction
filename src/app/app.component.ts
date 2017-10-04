@@ -12,8 +12,6 @@ export class AppComponent {
 
   @ViewChild(ShareCounterComponent) shareCounter: ShareCounterComponent;
 
-  title = 'app';
-  private childInput: string;
   private voterList: string[];
   private agreed: number;
   private disagreed: number;
@@ -28,14 +26,12 @@ export class AppComponent {
     this.missionService.launchedMission$.subscribe(
       mission => {
         this.launchedMissions.push(mission);
+      },
+      error => {
+        console.log('error');
       }
     );
   }
-
-  getInput() {
-    console.log(this.childInput);
-  }
-
   onVoted(vote: boolean) {
     vote ? this.agreed++ : this.disagreed++;
   }
@@ -50,7 +46,7 @@ export class AppComponent {
   }
 
   addMission(missionName: string) {
-    console.log(`M ission Name`, this.missionName);
+    console.log(`Mission Name`, this.missionName);
     this.missionService.announceMission(this.missionName);
   }
 }
