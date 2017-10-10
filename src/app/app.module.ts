@@ -9,6 +9,7 @@ import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { CounterComponent } from './counter/counter.component';
 import { ShareCounterComponent } from './share-counter/share-counter.component';
 import { MissionDetailsComponent } from './mission-details/mission-details.component';
+import { SelectorComponent } from './selector/selector.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MissionDetailsComponent } from './mission-details/mission-details.compo
     VoteTakerComponent,
     CounterComponent,
     ShareCounterComponent,
-    MissionDetailsComponent
+    MissionDetailsComponent,
+    SelectorComponent
   ],
   imports: [
     BrowserModule,
