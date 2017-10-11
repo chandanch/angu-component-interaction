@@ -1,0 +1,11 @@
+<h2>
+  {{selectorName}}
+</h2>
+<select [(ngModel)]="selectedMovie"  (ngModelChange)="onChangeFav(selectedMovie)">
+  <option *ngFor="let movie of moviesList; let i = index" [ngValue]="movie">
+    {{movie.name}} {{i}}
+  </option>
+</select>
+<button (click)="getMovie()">
+  Favourite Movie
+</button>

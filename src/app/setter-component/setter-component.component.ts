@@ -17,7 +17,7 @@ export class SetterComponentComponent implements OnInit {
 
   @Input()
   set name (name: string) {
-    this._name = name.toUpperCase();
+    this._name = name;
   }
 
   get showName(): string {
