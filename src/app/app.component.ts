@@ -1,6 +1,6 @@
 import { MissionService } from './service/mission.service';
 import { ShareCounterComponent } from './share-counter/share-counter.component';
-import { Component, ViewChild } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class AppComponent {
 
-  @ViewChild(ShareCounterComponent) shareCounter: ShareCounterComponent;
+  @ViewChild(ShareCounterComponent) shareCounter;
 
   private voterList: string[];
   private agreed: number;

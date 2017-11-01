@@ -10,7 +10,6 @@ export class SelectorComponent implements OnInit {
   public selectorName: string;
   public moviesList: IMovieList[];
   public  selectedMovie: string;
-  firstmovie;
 
   constructor() {
     this.selectorName = 'Chan Selector';

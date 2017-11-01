@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-share-counter',
@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ShareCounterComponent implements OnInit {
 
   @Output() onTagName = new EventEmitter<string>();
+  @ViewChild('shareHeading') shareHead: ElementRef;
   shareCount: number;
   taggedNames: string[] = [];
 
@@ -16,10 +17,12 @@ export class ShareCounterComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.shareHead.nativeElement.style.color = 'blue';
   }
 
   increaseShareCount() {
     this.shareCount += 1;
+    this.shareHead.nativeElement.style.color = 'orange';
   }
 
   tagName(name: string) {
